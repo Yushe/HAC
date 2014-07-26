@@ -6,11 +6,11 @@ DOES NOT WORK. DON'T BOTEHR FIXING IT, HERE FOR HISTORY ONLY.
 SEE ../
 
 
---[[
-    === HeX's AntiCheat ===
-    "A good attempt at something impossible"
-    --HeX (http://steamcommunity.com/id/MFSiNC) 
-]]
+
+=== HeX's AntiCheat ===
+"A good attempt at something impossible"
+--HeX (http://steamcommunity.com/id/MFSiNC) 
+
 
 
 I started work on this project as "NoBB" (No BaconBot) in 2009, my first lua prject.
