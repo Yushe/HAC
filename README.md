@@ -16,7 +16,7 @@ http://93.189.4.34/~knoxedeu/hac
 
 Credits:
 Leystryku - Speedhack/No-spread detection, helping with gmsv_slog2
-Willox - Helping cheaters lost their marbles since '14
+Willox - Helping cheaters lose their marbles since '14
 ```
 
 
