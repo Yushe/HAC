@@ -7,9 +7,13 @@
 ./DevStuff - Code snippets, useful bits, stuff not implemented etc
 ./HAC_future_ideas.lua - Very interesting, my notes and ideas file.
 
+HAC_Booty_And_BANLOGS.7z mirrors:
+http://deagler.net
+http://thegamer4life.com/hac
+http://93.189.4.34/~knoxedeu/hac
+
 Credits:
 Leystryku - Speedhack/No-spread detection, helping with gmsv_slog2
-
 ```
 
 
