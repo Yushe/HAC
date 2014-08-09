@@ -1,5 +1,7 @@
 ```
 === Index ===
+So here it is
+
 ./v13 - The latest version of HeX's AntiCheat. All code. All modules.
 ./12 - Old stuff from 2012
 ./Backdoor_Busting - Exposing workshop backdoors, then spamming their logs
@@ -14,6 +16,7 @@ http://93.189.4.34/~knoxedeu/hac
 
 Credits:
 Leystryku - Speedhack/No-spread detection, helping with gmsv_slog2
+Willox - Helping cheaters lost their marbles since '14
 ```
 
 
@@ -486,7 +489,7 @@ Fucks go to:
 
 
 
-- ZeroTheFallen (STEAM\_0:1:38717786) -- For being a cheating minge, writing backdoor'd addons, stealing and leaking HAC's clientside files on Hackforums, and using hacks on my server then claiming that he didn't.
+- ZeroTheFallen (STEAM\_0:1:38717786) -- For being a cheating minge, writing backdoor'd addons, profiting from the cheating problem, stealing and leaking HAC's clientside files on Hackforums, and using hacks on my server then claiming that he didn't.
 
 
 
@@ -512,8 +515,9 @@ Fucks go to:
 
 - Lenny (STEAM\_0:0:30422103, STEAM\_0:1:68284745) -- For stealing HAC's clientside files, giving skids code, posting stuff he shouldn't, and trying to prove his pack of cheat scripts aren't cheats.
 
-- Leystryku (see hac\_nosend.lua) -- For stealing HAC's clientside files and selling an AC that was largely based on methods from HAC.
+- Leystryku (see hac\_nosend.lua) -- For writing a file stealer, writing C++ hacks, giving hacks to tyler, profiting from the cheating problem.
 
+- nerve (STEAM\_0:1:76354629, STEAM\_0:0:4268975, STEAM\_0:0:12356551, and probably more) -- Skidding a file stealer from oubhack.
 
 
 - And above all, to Garry -- For constantly breaking things, changing stuff without telling people, not documenting all changes in his "updates", not listening to improvements/bug fixes/complaints or even fucking common sense, having zero care for anyone in the anti-cheating community, and for writing the best sandbox game of all time.
