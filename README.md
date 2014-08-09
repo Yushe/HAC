@@ -10,9 +10,11 @@ So here it is
 ./HAC_future_ideas.lua - Very interesting, my notes and ideas file.
 
 HAC_Booty_And_BANLOGS.7z mirrors:
+http://93.189.4.34/~knoxedeu/hac
+http://hac.twisted.cat (EU)
+http://hex.twisted.cat (USA)
 http://deagler.net
 http://thegamer4life.com/hac
-http://93.189.4.34/~knoxedeu/hac
 
 Credits:
 Leystryku - Speedhack/No-spread detection, helping with gmsv_slog2
@@ -477,9 +479,9 @@ Thanks go to:
 
 - C0BRA (STEAM\_0:0:32164051) -- For failing to bypass HAC many times in 2010, inspiring me to create sv\_SelfExists.
 
-- Blackwolf -- For making sure that I didn't accidentally ban all the Mac users!
-
 - TGiFallen (STEAM\_0:0:26495621) -- For ideas and advice.
+
+- Lutis -- For making sure that I didn't accidentally ban all the Mac users!
 
 
 
