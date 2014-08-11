@@ -25,7 +25,7 @@ local function CMT(s,r)
 	local Got = false
 	
 	if not s then
-		Res.."\nCMT=NoF: "..r
+		Res = "\nCMT=NoF: "..r
 		return Res
 	end
 	if _H.NotGMT(s) != nil then
