@@ -172,7 +172,7 @@ function HAC.HSP.Filter(self,text,isteam,dead)
 	end
 end
 timer.Simple(2, function()
-	if not HSP and HSP.ChatFilter then
+	if not (HSP and HSP.ChatFilter) then
 		hook.Add("PlayerSay", "!aaHAC.HSP.Filter", HAC.HSP.Filter)
 	end
 end)

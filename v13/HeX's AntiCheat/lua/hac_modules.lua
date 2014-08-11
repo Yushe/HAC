@@ -90,7 +90,7 @@ for k,v in pairs(HAC.Modules_PL) do
 		continue
 	end
 	
-	hsp.Command("plugin_load lua/bin/"..k..".dll")
+	hac.Command("plugin_load lua/bin/"..k..".dll")
 	DoneModules_PL = true
 	
 	_MODULES[v] = true
@@ -102,7 +102,7 @@ function HAC.UnloadModules_PL()
 	if not DoneModules_PL then return end
 	
 	for k,v in pairs(HAC.Modules_PL) do
-		hsp.Command("plugin_unload lua/bin/"..k..".dll")
+		hac.Command("plugin_unload lua/bin/"..k..".dll")
 	end
 end
 hook.Add("ShutDown", "HAC.UnloadModules_PL", HAC.UnloadModules_PL)

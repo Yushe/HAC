@@ -158,7 +158,7 @@ function HAC.Dev.CountAllLines(self)
 	//Sections
 	local ListTot = 0
 	for Where,Tab in pairs(Count) do
-		COLCON(HSP.YELLOW, Where)
+		COLCON(HAC.YELLOW, Where)
 		
 		for k,v in pairs(Tab) do
 			//Totals
@@ -171,7 +171,7 @@ function HAC.Dev.CountAllLines(self)
 			
 			PrintThis(k, 9, v, "    ")
 		end
-		COLCON(HSP.SGREY, "\n")
+		COLCON(HAC.SGREY, "\n")
 	end
 	
 	//Total

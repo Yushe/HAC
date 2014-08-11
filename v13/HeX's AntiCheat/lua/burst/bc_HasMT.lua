@@ -23,6 +23,11 @@ end
 local function CMT(s,r)
 	local Res = ""
 	local Got = false
+	
+	if not s then
+		Res.."\nCMT=NoF: "..r
+		return Res
+	end
 	if _H.NotGMT(s) != nil then
 		Got = true
 		Res = Res.."\nCMT=NotGMT: "..r
