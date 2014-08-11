@@ -200,7 +200,7 @@ hook.Add("HSPOnDisconnect", "HAC.HSP.Disconnect", HAC.HSP.Disconnect)
 
 //Abort map change
 function HAC.HSP.AbortMapChange()
-	if not utilx and utilx.AbortMapChange then return end
+	if not (utilx and utilx.AbortMapChange) then return end
 	utilx.AbortMapChange(true) 
 end
 
