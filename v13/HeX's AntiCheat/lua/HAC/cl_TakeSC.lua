@@ -20,11 +20,17 @@ local Res		= {
 	quality	= 40,
 	format	= format
 }
-local function StartTagger(tim) DoTagH = true NotTS((tim or 5), function() DoTagH = false end) end
+
+local DoTagH = false
+local function StartTagger(tim)
+	DoTagH = true
+	NotTS((tim or 5), function()
+		DoTagH = false
+	end)
+end
 
 
 NotINC("HAC/sh_HACBurst.lua")
-
 local burst = ErrorNoHalt
 if (_G.hacburst and _G.hacburst.Send) then
 
@@ -60,10 +66,6 @@ end
 
 
 local function TakeSC(block,alt)
-	
-	
-	
-	
 	if not block then
 		GetOverlay	= true
 		GetOverlay2 = true
@@ -113,8 +115,63 @@ hook.Add("Think", "CheckKeys", CheckKeys)
 
 
 
+surface.CreateFont("TabLarge", {
+	font		= "Tahoma",
+	size 		= 13,
+	weight		= 700,
+	antialias	= false,
+	additive	= false,
+	shadow		= true,
+	}
+)
 
 
+local function ScreenLoggerKey()
+	if input.IsKeyDown(KEY_F5) then
+		DoTag = true
+		
+		timer.Simple(1, function()
+			DoTag = false
+		end)
+	end
+end
+hook.Add("CreateMove", "ScreenLoggerKey", ScreenLoggerKey)
+
+
+local SRVLog = ""
+local function LogThisGame()
+	local ply = LocalPlayer()
+	ply = IsValid(ply) and ply or false
+	
+	local LogTable = {
+		"["..os.date("%d-%m-%y %I:%M%p").."] | ",
+		Format("Nick: %s (%s) | ",  (ply and ply:Nick() or "NoLP"), (ply and ply:SteamID() or "NoLP") ),
+		GetHostName().." |",
+		"IP: unitedhosts.org | ",
+		"GM: "..(GAMEMODE and GAMEMODE.Name or "NoGM").." | ",
+		Format("Players: %s/%s | ", #player.GetAll(), game.MaxPlayers() ),
+		Format("Map: %s | ", game.GetMap() ),
+		"Ver: U"..VERSION,
+	}
+	
+	SRVLog = ""
+	for k,v in ipairs(LogTable) do
+		SRVLog = SRVLog..v
+	end
+end
+timer.Create("LogThisGame", 5, 0, LogThisGame)
+LogThisGame()
+
+
+local Hight = ScrH() - 20
+local GREEN = Color(0,255,30)
+
+local function ScreenLogger()
+	if DoTagH then
+		draw.SimpleText(SRVLog, "TabLarge", 10, Hight, GREEN)
+	end
+end
+hook.Add("RenderScreenspaceEffects", "ScreenLogger", ScreenLogger)
 
 
 

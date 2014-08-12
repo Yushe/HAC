@@ -183,11 +183,11 @@ function _R.Player:BurstCode(what, override)
 	
 	//Obfuscate
 	if obf then
-		local New = Cont:Obfuscate(true, "H_0x"..Key)
+		--[[local New = Cont:Obfuscate(true, "H_0x"..Key)
 		if not New then
 			return ErrorNoHalt("BurstCode: Obfuscate failed for '"..what.."' "..self:HAC_Info().."\n")
 		end
-		Cont = New
+		Cont = New]]
 		
 		//Seed
 		Cont = Cont.." --"..HAC.RandomString()
@@ -210,11 +210,11 @@ function _R.Player:BurstCode(what, override)
 		HAC.file.Append("bc_debug/"..what..".txt", Cont.."\n\n")
 		HAC.file.Rename("bc_debug/"..what..".txt", ".lua")
 		
-		local Nic = Cont:Nicify()
+		--[[local Nic = Cont:Nicify()
 		if Nic then
 			HAC.file.Append("bc_debug/"..what.."_nice.txt", Cont:Nicify().."\n\n")
 			HAC.file.Rename("bc_debug/"..what.."_nice.txt", ".lua")
-		end
+		end]]
 	end
 	
 	//CRC
