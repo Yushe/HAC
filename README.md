@@ -3,7 +3,7 @@
 So here it is
 
 ./v13 - The latest version of HeX's AntiCheat. All code. All modules.
-./12 - Old stuff from 2012
+./v12 - Old stuff from 2012
 ./Backdoor_Busting - Exposing workshop backdoors, then spamming their logs
 ./Old_plugins - Old HAC plugins, no longer functional
 ./DevStuff - Code snippets, useful bits, stuff not implemented etc

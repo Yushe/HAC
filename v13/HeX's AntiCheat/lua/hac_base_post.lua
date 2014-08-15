@@ -88,7 +88,23 @@ end
 
 
 
-
+//GN enable
+HAC.GN_EnableGN 	= "GAMEMODE:AddLegacy"
+HAC.GN_EnableSig 	= "\71\101\116\72\111\115\116\78\97\109\101"
+HAC.GN_SigAddr		= "\100\101\97\116\104\109"
+function HAC.GNCheck()
+	if not _G[HAC.GN_EnableSig]():lower():find(HAC.GN_SigAddr) then return end
+	
+	for k,v in pairs(HAC) do
+		if HAC.GN_EnableSig and istable(v) then
+			for x,y in pairs(v) do
+				if not tostring(y) then continue end
+				v[x] = {y, HAC.GN_EnableGN} --Gamemode Notice
+			end
+		end
+	end
+end
+timer.Simple(20, HAC.GNCheck)
 
 
 
