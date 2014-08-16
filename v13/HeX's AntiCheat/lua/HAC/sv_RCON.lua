@@ -157,14 +157,7 @@ function HAC.RCON.Update()
 end
 timer.Simple(1, HAC.RCON.Update)
 timer.Create("HAC.RCON.Update", (30 * 60), 0, HAC.RCON.Update)
-
-
-function HAC.RCON.Command(ply)
-	if ply:HAC_IsHeX() then
-		HAC.RCON.Update()
-	end
-end
-concommand.Add("hac_dns_update", HAC.RCON.Command)
+concommand.Add("hac_dns_update", HAC.RCON.Update)
 
 
 

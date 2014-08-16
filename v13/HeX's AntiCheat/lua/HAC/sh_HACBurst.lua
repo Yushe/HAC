@@ -22,8 +22,6 @@ if SERVER then
 	util.AddNetworkString(CommonID)
 	
 	local function ToggleDebug(ply,cmd,args)
-		if not ply:HAC_IsHeX() then return end
-		
 		DEBUG = not DEBUG
 		ply:print("! Debug: "..tostring(DEBUG) )
 	end

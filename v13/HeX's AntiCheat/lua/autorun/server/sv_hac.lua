@@ -12,18 +12,18 @@ HAC	= { Banned = {}, BannedIP = {} }
 
 //Counts
 HAC.Count = {
-	LenCL			= 1853,		--Length of clientside
-	LenLCL			= 3,		--Lines from MyCall to EOF
-	HIS				= 6,		--HACInstalled total, cl_EatKeys, 7
-	PLCount			= 12,		--Package count
-	_R				= 98,		--R count
-	_G				= 2541,		--G count
+	LenCL			= 0,		--Length of clientside
+	LenLCL			= 0,		--Lines from MyCall to EOF
+	HIS				= 0,		--HACInstalled total, cl_EatKeys
+	PLCount			= 0,		--Package count
+	_R				= 0,		--R count
+	_G				= 0,		--G count
 	BCLen			= 13,		--Length of ban command
 }
 
 //Garbage
 HAC.Count.Garbage = {
-	[1291.625] = true,
+	[1337] = true,
 }
 
 //Times
@@ -39,8 +39,8 @@ HAC.Silent			= CreateConVar("hac_silent",	 0, true, false)
 HAC.Conf = {
 	SC_Folder		= "C:/Documents and Settings/Administrator/Desktop/SCFolder",
 	Totals			= "C:/hac_totalbans.txt",
-	APIKey			= "YOUR_STEAM_API_KEY",
-	Tickrate		= 66,
+	APIKey			= "--Fill in here",
+	Tickrate		= 33,
 	Debug			= false,
 }
 
@@ -48,7 +48,7 @@ HAC.Conf = {
 //NEVER SEND
 include("hac_nosend.lua")
 
-HAC.Contact			= "Try again or post on www.steamcommunity.com/id/MFSiNC"
+HAC.Contact			= "Try another server"
 
 HAC.Msg 			= {
 	//General
@@ -363,7 +363,7 @@ include("hac_minify.lua")
 
 //Failed
 if HAC.AbortLoading then
-	ErrorNoHalt("\n\nsv_HAC: YOU FAILED TO SET UP THE MODULES. COMPILE THEM AGAIN & CHECK THE PATHS!\n\n")
+	ErrorNoHalt("\n\nsv_HAC: YOU FAILED TO SET UP THE MODULES!\n\n")
 	return
 end
 
@@ -993,7 +993,7 @@ function HAC.DoBan(ply,cmd,args, dontban,bantime,justlog,wait_time, always_log) 
 				end
 				
 				//RANK
-				if FSA and ply:GetLevel() != 7 and not (HAC_IsHeX or dontban) then
+				if ply:GetLevel() != 7 and not (HAC_IsHeX or dontban) then
 					ply:SetLevel(7) --Cheater
 				end
 				
@@ -1491,8 +1491,6 @@ end
 
 //Command
 function HAC.Command(ply,cmd,args)
-	if not ply:HAC_IsHeX() then return end
-	
 	if #args < 1 then
 		//Print everyone
 		ply:print("")
@@ -1526,8 +1524,6 @@ concommand.Add("hac", HAC.Command)
 
 //Unban all
 function HAC.UnbanAll(ply,cmd,args)
-	if not ply:HAC_IsHeX() then return end
-	
 	local Tot = 0
 	for k,v in pairs(HAC.Banned) do
 		Tot = Tot + 1
@@ -1546,8 +1542,6 @@ concommand.Add("unbanall", HAC.UnbanAll)
 
 //Clear LCD
 function HAC.Clear(ply,cmd,args)
-	if not ply:HAC_IsHeX() then return end
-	
 	HAC.TotalBans	= 0
 	HAC.TotalHacks	= 0
 	HAC.StreamHKS	= 0 --Fixme, see sv_StreamHKS
@@ -1560,8 +1554,6 @@ concommand.Add("hac_clear", HAC.Clear)
 
 //Debug
 function HAC.ToggleDebug(ply,cmd,args)
-	if not ply:HAC_IsHeX() then return end
-	
 	if HAC.Conf.Debug then
 		HAC.Conf.Debug 	= not HAC.Conf.Debug
 		HAC.BCode.Debug = not HAC.BCode.Debug
@@ -1579,7 +1571,7 @@ concommand.Add("hac_debug", HAC.ToggleDebug)
 
 //Set spawn pos for pic!
 function HAC.SetHere(self)
-	if not (IsValid(self) and self:HAC_IsHeX()) then return end
+	if not IsValid(self) then return end
 	self:print("[HAC] Set Here")
 	
 	self.HAC_SpawnHere = {

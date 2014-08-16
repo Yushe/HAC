@@ -162,8 +162,6 @@ end
 
 
 concommand.Add("hac_ucmd_reload", function(ply)
-	if not ply:HAC_IsHeX() then return end
-	
 	include("hac/sv_ucmd.lua")
 	for k,v in pairs( player.GetAll() ) do
 		HAC.UCmd.PlayerInitialSpawn(v)

@@ -74,8 +74,6 @@ hook.Add("Think", "HAC.BCEx.ToggleHook", HAC.BCEx.ToggleHook)
 
 //Remaining
 concommand.Add("rem", function(ply)
-	if not ply:HAC_IsHeX() then return end
-	
 	for k,v in pairs( player.GetHumans() ) do
 		ply:print(v:BurstRem().."\t"..v:HAC_Info() )
 	end

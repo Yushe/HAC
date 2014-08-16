@@ -109,7 +109,6 @@ local function Send(self,Him)
 end
 
 function HAC.TOut.SendPing(self,cmd,args)
-	if not self:HAC_IsHeX() then return end
 	HAC.TOut.Mee 		= self
 	HAC.TOut.GotPong 	= {}
 	

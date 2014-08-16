@@ -209,8 +209,6 @@ concommand.Add("sk", HAC.Skid.Reset)
 
 //Reload
 function HAC.Skid.Reload(self,cmd,args)
-	if not self:HAC_IsHeX() then return end
-	
 	local Old = table.Count(HAC.Skiddies)
 	include("lists/sv_SkidList.lua")
 	include("hac/sv_skidcheck.lua")
@@ -222,8 +220,6 @@ concommand.Add("sk_reload", HAC.Skid.Reload)
 
 //Sync with BANNED
 function HAC.Skid.Sync(self)
-	if not self:HAC_IsHeX() then return end
-	
 	local Tot = 0
 	for SID,Tab in pairs(HAC.NeverSend) do
 		if HAC.Skiddies[ SID ] or Tab[1]:find("12 year old") then continue end
@@ -241,8 +237,6 @@ concommand.Add("sk_sync", HAC.Skid.Sync)
 
 //Dump
 function HAC.Skid.Dump(self)
-	if not self:HAC_IsHeX() then return end
-	
 	HAC.file.Write("hac_db_all.txt", util.TableToJSON(HAC.Skiddies) )
 	
 	HAC.file.Rename("hac_db_all.txt", ".json")

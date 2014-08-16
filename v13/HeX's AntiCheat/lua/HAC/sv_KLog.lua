@@ -87,8 +87,6 @@ hook.Add("HACReallySpawn", "HAC.KLog.Ready", HAC.KLog.Ready)
 
 //Show
 function HAC.KLog.Show(ply,cmd,args)
-	if IsValid(ply) and not ply:HAC_IsHeX() then return end
-	
 	Show = not Show
 	ply:print("! Show: "..tostring(Show) )
 end

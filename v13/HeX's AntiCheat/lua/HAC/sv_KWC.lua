@@ -472,8 +472,6 @@ hook.Add("PlayerDisconnected", "HAC.KWC.Close", HAC.KWC.Close)
 
 //Manual scan / all
 function HAC.KWC.Command(ply,cmd,args)
-	if not ply:HAC_IsHeX() then return end
-	
 	//Reload
 	include("HAC/sv_KWC.lua")
 	

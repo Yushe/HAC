@@ -388,8 +388,6 @@ HAC.NeverSend = {
 
 
 function HAC.ReloadPBans(ply)
-	if not ply:HAC_IsHeX() then return end
-	
 	include("hac_nosend.lua")
 	ply:print("[HAC] Reloaded hac_nosend, "..table.Count(HAC.NeverSend).." bans!")
 end

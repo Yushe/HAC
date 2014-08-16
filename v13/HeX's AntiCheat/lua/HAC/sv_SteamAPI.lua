@@ -451,7 +451,7 @@ local function VAC(v, SID,SteamID)
 	
 	//Rank
 	if VACEnabled:GetBool() then
-		if FSA and not (v:Banned() or HAC.Silent:GetBool()) then
+		if not (v:Banned() or HAC.Silent:GetBool()) then
 			timer.Simple(5, function()
 				if IsValid(v) and not HAC.NoPromote[ v:GetLevel() ] then
 					v:SetLevel(35) --VAC BANNED

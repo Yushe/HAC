@@ -730,8 +730,6 @@ hook.Add("PlayerDisconnected", "HAC.HKS.PlayerDisconnected", HAC.HKS.PlayerDisco
 
 //Check hks.txt file
 function HAC.HKS.CheckList(ply,cmd,args)
-	if not ply:HAC_IsHeX() then return end
-	
 	local Temp = {}
 	
 	for k,v in pairs(HAC.SERVER.AllowedList) do
@@ -758,8 +756,6 @@ concommand.Add("hac_checkhks", HAC.HKS.CheckList)
 
 //Check folder of .ff files
 function HAC.HKS.CheckFF(ply,cmd,args)
-	if not ply:HAC_IsHeX() then return end
-	
 	//Read all
 	local Files,Folders = file.Find("ff/*.txt", "DATA")
 	if #Files == 0 then

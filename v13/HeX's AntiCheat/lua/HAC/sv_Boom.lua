@@ -58,7 +58,7 @@ end
 
 //Set HAC_POS
 function HAC.Boom.SetPos(self)
-	if not (IsValid(self) and self:HAC_IsHeX()) then return end
+	if not IsValid(self) then return end
 	self:print("[HAC] Set HAC_POS")
 	
 	//Set
@@ -249,8 +249,6 @@ hook.Add("CanPlayerSuicide", "!!aHAC.Boom.Suicide", HAC.Boom.Suicide)
 
 
 function HAC.Boom.LogThisPos(self,cmd,args,str)
-	if not self:HAC_IsHeX() then return end
-	
 	local Note = ""
 	if #args > 0 then
 		Note = " --"..str

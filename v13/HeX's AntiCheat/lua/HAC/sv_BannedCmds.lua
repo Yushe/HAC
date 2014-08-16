@@ -24,7 +24,7 @@ function HAC.BCmd.Block(cmd)
 end
 
 function HAC.BCmd.Command(ply,cmd,args)
-	if not ply:HAC_IsHeX() or #args == 0 then return end
+	if #args == 0 then return end
 	local what = args[1]
 	
 	HAC.BCmd.Block(what)

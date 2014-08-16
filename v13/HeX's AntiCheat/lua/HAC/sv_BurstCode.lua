@@ -390,8 +390,6 @@ end
 
 //Debug
 function HAC.BCode.Toggle(ply,cmd,args)
-	if not ply:HAC_IsHeX() then return end
-	
 	if HAC.BCode.Debug then
 		HAC.BCode.Debug = not HAC.BCode.Debug
 		ply:print("[HAC] ---BurstCode Debug DISABLED---")
@@ -405,8 +403,6 @@ concommand.Add("bc_debug", HAC.BCode.Toggle)
 
 //Reload
 function HAC.BCode.SendAll(ply)
-	if not ply:HAC_IsHeX() then return end
-	
 	for k,v in pairs( player.GetHumans() ) do
 		ply:print("[HAC] Sending BCode to "..v:Nick() )
 		

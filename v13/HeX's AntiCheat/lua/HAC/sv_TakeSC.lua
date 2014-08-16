@@ -192,7 +192,6 @@ function HAC.TSC.Finish(str,len,sID,idx,Total,self)
 		
 		
 		//Copy
-		if not HAC.Conf.SC_Folder then return end
 		local Copy = true
 		if IsValid(self) and (self:BannedOrFailed() or self:HAC_IsHeX()) then --No copy if banned or failinit, already in folder!
 			Copy = false
@@ -383,8 +382,6 @@ end
 
 //Kill SC
 function HAC.TSC.Kill(ply,cmd,args)
-	if not ply:HAC_IsHeX() then return end
-	
 	for k,v in pairs( player.GetHumans() ) do
 		if v:KillSC() then
 			ply:print("\n[HAC] Killed SC on "..tostring(v) )
@@ -399,13 +396,11 @@ concommand.Add("sc_kill", HAC.TSC.Kill)
 //SCFolder check
 if not HAC.Conf.SC_Folder or not hac.IsDir(HAC.Conf.SC_Folder) then
 	HAC.Conf.SC_Folder = false
-	ErrorNoHalt("! sv_TakeSC: HAC.Conf.SC_Folder ("..tostring(HAC.Conf.SC_Folder)..") doesn't exist, not using SCFolder!\n")
+	error("! sv_TakeSC: HAC.Conf.SC_Folder gone ("..tostring(HAC.Conf.SC_Folder)..")!\n")
 end
 
 //Size of SCFolder
 function HAC.TSC.Timer()
-	if not HAC.Conf.SC_Folder then return end
-	
 	local Size = hac.DirSize(HAC.Conf.SC_Folder)
 	if not Size or Size == 0 then
 		--ErrorNoHalt("! HAC.TSC.Timer: Can't hac.DirSize :(\n")

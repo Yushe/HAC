@@ -7,7 +7,7 @@ resource.AddFile("materials/hac/hac.vmt")
 
 //Spectate
 function HAC.Spec.Command(self)
-	if not (IsValid(self) and self:HAC_IsHeX()) then return	end
+	if not IsValid(self) then return end
 	self:print("[HAC] Sending Spectate..")
 	
 	self.HAC_DoneSpectate = true

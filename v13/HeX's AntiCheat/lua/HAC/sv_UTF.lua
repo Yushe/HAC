@@ -67,8 +67,6 @@ end
 
 
 function HAC.UTF.ScanFile(ply,cmd,args)
-	if not ply:HAC_IsHeX() then return end
-	
 	//Read
 	local Cont = HAC.file.Read("utf.txt", "DATA")
 	if not ValidString(Cont) then

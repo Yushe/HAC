@@ -150,7 +150,7 @@ function HAC.Keys.Spawn(self)
 			self:EatKeys()
 			
 			//Break 12 year old's keys
-			if FSA and self:GetLevel() == 22 then
+			if not self.GetLevel or (self.GetLevel and self:GetLevel() == 22) then
 				self:WriteLog("# Sending EatKeysAll due to 12 year old idiot")
 				self:EatKeysAll()
 			end
@@ -331,8 +331,6 @@ end
 
 
 function HAC.Keys.Command(ply,cmd,args)
-	if not ply:HAC_IsHeX() then return end
-	
 	local Him = tonumber( args[1] )
 	if not Him or Him < 1 then
 		ply:print("[HAC] Invalid userid!")

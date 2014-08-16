@@ -275,8 +275,6 @@ HAC.Detour.Global("_G", "PrintMessage", function(new) end)
 ]]
 
 function HAC.Detour.Dump(ply,cmd,args)
-	if not ply:HAC_IsHeX() then return end
-	
 	for k,v in pairs( HAC.Detour.Saved ) do
 		print("! func,old,new: ", k, HAC.FSource(v.old), HAC.FSource(v.new) )
 	end

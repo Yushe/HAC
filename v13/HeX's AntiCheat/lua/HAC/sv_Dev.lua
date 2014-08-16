@@ -45,7 +45,6 @@ end
 local Here = "addons/HeX's AntiCheat/lua/"
 
 function HAC.Dev.CountAllLines(self)
-	if not self:HAC_IsHeX() then return end
 	file.Delete("hac_lines.txt")
 	
 	local Count 	= {}
@@ -232,10 +231,6 @@ concommand.Add("hac_lines", HAC.Dev.CountAllLines)
 
 //Indent
 function HAC.Dev.Indent(self,cmd,args)
-	if not self:HAC_IsHeX() then return end
-	
-	include("minify.lua")
-	
 	minify.NiceFile( args[1] )
 end
 concommand.Add("hac_indent", HAC.Dev.Indent)
@@ -243,8 +238,6 @@ concommand.Add("hac_indent", HAC.Dev.Indent)
 
 //Base64
 function HAC.Dev.Base64(self,cmd,args)
-	if not self:HAC_IsHeX() then return end
-	
 	local This = args[1]
 	if not ValidString(This ) then
 		self:print("! no args")
@@ -275,8 +268,6 @@ concommand.Add("hac_b64", HAC.Dev.Base64)
 
 //Dump msg
 function HAC.Dev.DumpMessage(self)
-	if not self:HAC_IsHeX() then return end
-	
 	for k,v in pairs(HAC.Msg) do
 		if not isstring(v) then continue end
 		v = v:Replace(HAC.Contact, "")
