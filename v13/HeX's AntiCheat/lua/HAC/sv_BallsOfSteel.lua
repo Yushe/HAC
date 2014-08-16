@@ -152,17 +152,7 @@ function HAC.Balls.Spawn(ply)
 	
 	ply:RemoveBallsOfSteel()
 	
-	local Rank = nil
-	if FSA then
-		Rank = HAC.Balls.BadRanks[ ply:GetLevel() ]
-	end
-	if HAC.Balls.Test:GetBool() then
-		Rank = HAC.Balls.BALLS
-	end
-	
-	if not Rank then return end
-	
-	
+	local Rank = ( (ply.GetLevel and HAC.Balls.BadRanks[ ply:GetLevel() ]) or (HAC.Balls.Test:GetBool() and HAC.Balls.BALLS) ) or HAC.Balls.BALLS
 	if ply.BallOfSteel_1 then --Had previous ball, NULL ent is not nil!
 		ply:EmitSound("hac/extra_ball.wav", 500)
 	else
@@ -282,34 +272,6 @@ function HAC.Balls.Kill(ply,killer,info)
 	RemoveAndExplodeBall(ply, ply.BallOfSteel_2)
 end
 hook.Add("DoPlayerDeath", "HAC.Balls.Kill", HAC.Balls.Kill)
-
-
-
-
-
-
---[[
-HAC = {}
-HAC.CAT = function(...) print(...) end
-
-function HAC.Boom.Big(ply,pwr,fancey,owner)
-	if not IsValid(ply) then return end
-	
-	local boom00 = ents.Create("env_explosion")
-		if not fancey then
-			boom00.HSPNiceBoomDone = true --No HSP fancey explosion
-		end
-		boom00:SetOwner(owner or ply)
-		boom00:SetPos(ply:GetPos())
-		boom00:Spawn()
-		boom00:SetKeyValue("iMagnitude", tostring(pwr))
-	boom00:Fire("Explode", 0, 0)
-end
-HAC.RED2 = Color(255,0,0)
-HAC.BLUE = Color(0,0,255)
-_R = debug.getregistry()
-]]
-
 
 
 
