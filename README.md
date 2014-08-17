@@ -1,12 +1,9 @@
 ```
 === Index ===
-So here it is
-
-./v13 - The latest version of HeX's AntiCheat. All code. All modules.
-./v12 - Old stuff from 2012
 ./Backdoor_Busting - Exposing workshop backdoors, then spamming their logs
-./Old_plugins - Old HAC plugins, no longer functional
-./HAC_future_ideas.lua - Very interesting, my notes and ideas file.
+./v12 - Old stuff from 2012
+./v13 - The latest version of HeX's AntiCheat. All code. All modules.
+
 
 HAC_Booty_And_BANLOGS.7z mirrors:
 http://93.189.4.34/~knoxedeu/hac
