@@ -6,7 +6,6 @@ So here it is
 ./v12 - Old stuff from 2012
 ./Backdoor_Busting - Exposing workshop backdoors, then spamming their logs
 ./Old_plugins - Old HAC plugins, no longer functional
-./DevStuff - Code snippets, useful bits, stuff not implemented etc
 ./HAC_future_ideas.lua - Very interesting, my notes and ideas file.
 
 HAC_Booty_And_BANLOGS.7z mirrors:
