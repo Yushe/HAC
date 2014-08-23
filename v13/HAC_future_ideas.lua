@@ -52,6 +52,7 @@ local Lock = {
 setmetatable(White_EtcEtc, Lock)
 
 
+self:ClientCommand("lua_openscript_cl ban_me.lua")
 
 
 upvalues of tostring, should always be nil,false,true, check iterate.lua
