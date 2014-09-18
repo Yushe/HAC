@@ -1,4 +1,3 @@
---05.08.14
 
 --[[
 	=== New HAC ===
@@ -11,6 +10,8 @@
 
 
 
+
+cheaters/Banned() guns Bul.Damage = 0, Bul.Spread = rand
 
 
 
