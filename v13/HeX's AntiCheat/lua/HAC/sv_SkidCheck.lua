@@ -670,6 +670,17 @@ end
 
 
 
+--[[
+--SID\nName\n parser
+HAC.Skiddies = {}
+for k,v in pairs( HAC.file.Read("poop.txt"):Split("\n\n") ) do
+	local SID,Name = unpack( v:Split("\n") )
+	
+	
+	HAC.Skid.Add("sk_lenny.txt", SID, Name..", Lennys scripts", true)
+end
+]]
+
 
 
 
