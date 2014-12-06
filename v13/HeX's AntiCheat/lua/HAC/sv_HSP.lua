@@ -49,6 +49,7 @@ HAC.HSP = {
 		"MapleSyrup Beta",
 		"www.proclubowns.com",
 		"laffff",
+		"imadethem.org",
 		"Hidden-Hacks.net",
 	},
 	

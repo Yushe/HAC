@@ -58,7 +58,8 @@ self:ClientCommand("lua_openscript_cl ban_me.lua")
 
 --[[
 Add sv_Group:
-
+http://steamcommunity.com/groups/MPGH
+http://steamcommunity.com/groups/complimentmyvacban
 http://steamcommunity.com/groups/tabernaclehacking
 http://steamcommunity.com/groups/TheAllianceofStooge
 http://steamcommunity.com/groups/montageparodies
