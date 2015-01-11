@@ -6,11 +6,12 @@
 
 
 HAC_Booty_And_BANLOGS.7z mirrors:
-http://93.189.4.34/~knoxedeu/hac
-http://hac.twisted.cat (EU)
-http://hex.twisted.cat (USA)
-http://deagler.net
 http://thegamer4life.com/hac
+http://hac.twisted.cat
+http://fastdl.unitedhosts.org/hac
+
+Browse the booty:
+http://fastdl.unitedhosts.org/HAC_Booty_And_BANLOGS
 
 Credits:
 Leystryku - Speedhack/No-spread detection, helping with gmsv_slog2
