@@ -10,7 +10,7 @@ http://thegamer4life.com/hac
 http://hac.twisted.cat
 http://fastdl.unitedhosts.org/hac
 
-Browse the booty:
+Browse & download the booty:
 http://fastdl.unitedhosts.org/HAC_Booty_And_BANLOGS
 
 Credits:
@@ -18,6 +18,11 @@ Leystryku - Speedhack/No-spread detection, helping with gmsv_slog2
 Willox - Helping cheaters lose their marbles since '14
 ```
 
+## Don't use this as-is ##
+## Try my SkidCheck addon if you want an easy way to keep 16,000 cheaters off your server ##
+https://github.com/MFSiNC/SkidCheck-2.0
+
+* * *
 
 "A good attempt at something impossible".
 
