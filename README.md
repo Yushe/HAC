@@ -5,12 +5,7 @@
 ./v13 - The latest version of HeX's AntiCheat. All code. All modules.
 
 
-HAC_Booty_And_BANLOGS.7z mirrors:
-http://thegamer4life.com/hac
-http://hac.twisted.cat
-http://fastdl.unitedhosts.org/hac
-
-Browse & download the booty:
+Browse & download the booty / banlogs here:
 http://fastdl.unitedhosts.org/HAC_Booty_And_BANLOGS
 
 Credits:
