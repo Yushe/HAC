@@ -8,8 +8,7 @@
 Browse & download the booty / banlogs here:
 http://fastdl.unitedhosts.org/HAC_Booty_And_BANLOGS
 
-Credits:
-Leystryku - Speedhack/No-spread detection, helping with gmsv_slog2
+Help credits:
 Willox - Helping cheaters lose their marbles since '14
 ```
 
