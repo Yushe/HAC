@@ -12,11 +12,12 @@ Help credits:
 Willox - Helping cheaters lose their marbles since '14
 ```
 
-## Don't use this ##
-## This code is only useful for historic reasons. It no longer works ##
-## Try my SkidCheck addon if you want an easy way to keep ~67,167 cheaters off your server ##
+## Don't use this. It will not work and will break your server##
+## This code is only useful for historic reasons ##
+## Try my SkidCheck addon if you want an easy way to keep >100,000 cheaters off your server ##
 https://github.com/MFSiNC/SkidCheck-2.0
 
+Begin 2014 readme:
 * * *
 
 "A good attempt at something impossible".
