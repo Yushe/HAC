@@ -30,13 +30,13 @@ HAC	= { Skiddies = {}, Banned = {}, BannedIP = {} }
 
 //Counts
 HAC.Count = {
-	LenCL			= 1584,		--Length of clientside
-	LenLCL			= 3,		--Lines from MyCall to EOF
-	HIS				= 5,		--HAC_Installed total
-	PLCount			= 12,		--Package count
-	_R				= 103,		--R count
-	_G				= 2598,		--G count
-	BCLen			= 12,		--Length of ban command
+	LenCL			= 8,		--Length of clientside
+	LenLCL			= 8,		--Lines from MyCall to EOF
+	HIS				= 8,		--HAC_Installed total
+	PLCount			= 8,		--Package count
+	_R				= 8,		--R count
+	_G				= 8,		--G count
+	BCLen			= 8,		--Length of ban command
 	Ban 			= 0,		--Time to ban
 }
 
