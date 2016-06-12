@@ -317,11 +317,8 @@ concommand.Add("sc_kill", HAC.TSC.Kill)
 
 
 
-//SCFolder check
-if not HAC.TSC.SC_Folder or not hac.IsDir(HAC.TSC.SC_Folder) then
-	HAC.TSC.SC_Folder = false
-	ErrorNoHalt("! sv_TakeSC: HAC.TSC.SC_Folder ("..tostring(HAC.TSC.SC_Folder)..") doesn't exist, not using SCFolder!\n")
-end
+
+
 
 //Size of SCFolder
 function HAC.TSC.Timer()

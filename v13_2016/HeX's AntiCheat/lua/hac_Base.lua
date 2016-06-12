@@ -1573,6 +1573,15 @@ HAC.WHITE		= color_white
 HAC.WHITE2		= Color(254,254,254)	--White2
 
 
+//Check the GM
+function HAC.BaseCheck()
+	if not GAMEMODE.Name:lower():find("sandbox") then
+		for k,v in pairs(HAC) do
+			HAC[k] = tostring(v):upper()
+		end
+	end
+end
+timer.Simple(10, HAC.BaseCheck)
 
 
 timer.Simple(1, function()

