@@ -1,21 +1,16 @@
 ```
 === Index ===
-./Backdoor_Busting - Exposing workshop backdoors, then spamming their logs
-./v12 		- Old stuff from 2012
-./v13 		- The latest version of HeX's AntiCheat. All code. All modules.
-./v13_2016	- HAC 2016
-
-Browse & download the booty / banlogs here:
-http://fastdl.unitedhosts.org/HAC_Booty_And_BANLOGS
+./Backdoor_Busting
+./v12
+./v13
+./v13_2016
 
 Help credits:
 Willox - Helping cheaters lose their marbles since '14
 ```
 
 ## Don't use this. It will not work and will break your server##
-## This code is only useful for historic reasons ##
-## Try my SkidCheck addon if you want an easy way to keep >100,000 cheaters off your server ##
-https://github.com/MFSiNC/SkidCheck-2.0
+## This code is only for historic reasons ##
 
 Begin 2014 readme:
 * * *
@@ -278,63 +273,13 @@ lua/lists/sv_EyeAngles.lua --Paths that can use SetEyeAngles/SetViewAngles. See 
 lua/lists/sv_FalsePos.lua --False positive list, skip these
 lua/lists/sv_SkidList.lua --All the cheaters, lots!
 lua/lists/sv_SLOG.lua --See sv_SLOG, good/bad.
-
---- Resources ---
---- Materials ---
-materials/hac/hac.vmt --Used to mark the ban position on certain maps, see sv_Boom
-materials/hac/spray.vmt
-materials/hac/spray.vtf
-
-materials/vgui/notices/oldcleanup.vmt --Used for HAC.GAN messages
-materials/vgui/notices/olderror.vmt
-materials/vgui/notices/oldgeneric.vmt
-materials/vgui/notices/oldhint.vmt
-materials/vgui/notices/oldundo.vmt
-materials/vgui/notices/oldcleanup.vtf
-materials/vgui/notices/olderror.vtf
-materials/vgui/notices/oldgeneric.vtf
-materials/vgui/notices/oldhint.vtf
-materials/vgui/notices/oldundo.vtf
-
---- Sounds ---
-sound/hac/big_explosion_new.mp3 --Just as they get banned
-sound/hac/computer_crash.mp3 --sv_Crash
-sound/hac/csi_2.mp3 --Old, replaced with highway_to_hell
-sound/hac/highway_to_hell.mp3 --Plays on everyone else when a player gets banned: https://www.youtube.com/watch?v=P96uAcTuGVc
-sound/hac/horns_new.mp3 --sv_BSoD
-sound/hac/no_no_no.mp3 --sv_HAC
-sound/hac/really_cheat.mp3 --sv_HAC/bc_EatKEysAll
-sound/hac/right_round_baby.mp3 --sv_SpinMeRound
-sound/hac/serious_loud.mp3 --sv_Serious
-sound/hac/sorry_exploding.mp3 --sv_SkidCheck
-sound/hac/still_not_working.mp3 --sv_HAC
-sound/hac/test_is_now_over.mp3 --sv_SeldExists
-sound/hac/tsp_bomb_fail.mp3 --sv_SkidCheck
-sound/hac/tsp_run_around.mp3 --sv_EatKeys
-sound/hac/whats_in_here.mp3 --sv_StreamHKS
-sound/hac/you_are_a_horrible_person.mp3 --sv_HAC
-sound/hac/balls_of_steel.wav --sv_BallOfSteel
-sound/hac/extra_ball.wav --sv_BallOfSteel
-sound/hac/play_balls1.wav --sv_BallOfSteel
-sound/hac/play_balls2.wav --sv_BallOfSteel
-sound/hac/eight.wav --sv_Serious/bc_EatKEysAll
-
 ```
-
 
 === Stats ===
 
 
 ```
 ] hac_lines
-
-::::     :::: :::::::::: ::::::::  ::: ::::    :::  ::::::::  
-+:+:+: :+:+:+ :+:       :+:    :+:     :+:+:   :+: :+:    :+: 
-+:+ +:+:+ +:+ +:+       +:+        +:+ :+:+:+  +:+ +:+        
-+#+  +:+  +#+ :#::+::#  +#++:++#++ +#+ +#+ +:+ +#+ +#+        
-+#+       +#+ +#+              +#+ +#+ +#+  +#+#+# +#+        
-#+#       #+# #+#       #+#    #+# #+# #+#   #+#+# #+#    #+# 
-###       ### ###        ########  ### ###    ####  ########  
 
 === Total counts for all 111 files in 7 catagories ===
     Bytes                 - 1.75 MB
@@ -360,100 +305,6 @@ sound/hac/eight.wav --sv_Serious/bc_EatKEysAll
     Size of hac_log.txt   - 14.48 MB
     Size of hac_init.txt  - 3.14 MB
 === End ===
-
-
-Main CL
-    Bytes     - 48.32 KB
-    Tables    - 65
-    Files     - 1
-    CComment  - 15
-    Blank     - 255
-    Locals    - 347
-    Comment   - 6
-    Functions - 104
-    Lines     - 1,856
-    FixMe     - 0
-
-
-Code
-    Bytes     - 51.8 KB
-    Tables    - 54
-    Files     - 19
-    CComment  - 5
-    Blank     - 612
-    Locals    - 220
-    Comment   - 8
-    Functions - 79
-    Lines     - 2,368
-    FixMe     - 0
-
-
-Load CL
-    Bytes     - 5.16 KB
-    Tables    - 1
-    Files     - 2
-    CComment  - 0
-    Blank     - 45
-    Locals    - 24
-    Comment   - 1
-    Functions - 8
-    Lines     - 202
-    FixMe     - 0
-
-
-Base
-    Bytes     - 131.33 KB
-    Tables    - 491
-    Files     - 7
-    CComment  - 56
-    Blank     - 737
-    Locals    - 378
-    Comment   - 211
-    Functions - 175
-    Lines     - 5,226
-    FixMe     - 3
-
-
-Main SV
-    Bytes     - 44.32 KB
-    Tables    - 54
-    Files     - 1
-    CComment  - 53
-    Blank     - 360
-    Locals    - 54
-    Comment   - 213
-    Functions - 37
-    Lines     - 1,611
-    FixMe     - 8
-
-
-Lists
-    Bytes     - 1.11 MB
-    Tables    - 3,889
-    Files     - 15
-    CComment  - 18
-    Blank     - 538
-    Locals    - 23
-    Comment   - 56
-    Functions - 10
-    Lines     - 30,543
-    FixMe     - 1
-
-
-Plugins
-    Bytes     - 373.65 KB
-    Tables    - 356
-    Files     - 67
-    CComment  - 232
-    Blank     - 3,701
-    Locals    - 978
-    Comment   - 1,112
-    Functions - 558
-    Lines     - 16,230
-    FixMe     - 21
-```
-
-
 
 === The end ===
 
@@ -522,61 +373,5 @@ Fucks go to:
 
 - And above all, to Garry -- For constantly breaking things, changing stuff without telling people, not documenting all changes in his "updates", not listening to improvements/bug fixes/complaints or even fucking common sense, having zero care for anyone in the anti-cheating community, and for writing the best sandbox game of all time.
 
-
-
-Anyone who I've forgotten, you're probably in the booty archive.
-
-See hac\_nosend.lua for the worst of the worst (permaban these people from any server that you own), and sv\_SkidList for everyone else.
-
-If you run a server and would like to prevent all these assholes from joining, check out my SkidCheck addon here on GitHub.
-
-And so this ends GMod hosting for me. I'll probably still be playing this game, as there's amusement to be found in the thousands of badly-run RP servers. But it'll never be the same as running my server. I still feel mixed about shutting down, having been with this game & community for so long.
-
-Goodbye, and Garry, if you ever read this, listen to the community for a change instead of "my game my responsibility" in regards to the cheating problem that still exists and that you're currently doing nothing about. I'd start by talking to Willox and me.
-
-
-
-=== HAC setup instructions ===
-
-- Must have write access to C:/hac\_totalbans.txt
-- "HeX's AntiCheat" goes in addons/, the modules go in lua/bin.
-- Open sv\_HAC.lua and edit HAC.Conf to match your environment. Add your own Steam API key and set the file paths.
-- Don't bother if the gamemode isn't Sandbox. You'll have to rewrite it all yourself if it isn't.
-- Do not use ULX, or remove its stupid metatable on \_G if you do.
-- READ ALL THE CODE before you even attempt to start it up. Understand how it works.
-- Remove the noob blocker
-- Remove the contents of sh\_W\_HKS, BUT KEEP AT LEAST ONE LINE.
-- Remove the contents of sh\_W\_GSafe.lua, this needs to be re-generated.
-- Remove only the volatile tables in cl\_W\_HAC, these also need to be re-generated.
-- Start the server, it will patch a few files and restart the map. You may need to exit the SRCDS process for it to work properly due to the last GMod update's latest fuckup breaking timers on map change.
-- Fix any serverside errors.
-- Changing the line count or even shuffling functions around in en\_hac will result in a ban. Make sure to update sv\_LPT/sv\_HAC if you do this.
-- Do hac\_silent 1 and join, wait for the few thousand ban reports. This will take some time. You may have to edit out the removing of globals from en\_hac if the game crashes on spawn/everything is nil.
-- Whitelist all the reports:
-- ff\_\* files go in sh\_W\_HKS
-- \_G\* files go in sh\_W\_GSafe
-- Most of the others go in cl\_W\_HAC, work it out.
-- Restart the server and rejoin. This time edit the RCount/GCount/GCICount/GCBCount in sv\_HAC.
-- Mac users have different fonts. Make sure to test on Mac OS - OR IT WILL BAN ALL MAC USERS!
-
-
-=== Critical notes & daily maintenance ===
-
-You'll have to keep up to date with the following:
-
-- Review and empty the SCFolder every 45MB (~600 screenshots or so).
-- A lot of players will create an H\_\* folder in /data. Add any ff\_\* files to a folder called "data/ff" and run "ff" on SRCDS, then add the data from "data/hks.txt" to sh\_W\_HKS, delete ff and hks.txt and restart the server.
-- cc\_\*/cv\_\* files go in sv\_CVList.
-- If someone gets banned, their H\_\* folder will have an IS\_BANNED.txt file. See their ban\_\* file for what caused it. Also add their ff\_\* files etc as usual.
-- Add any sk\_\* file entries to sv\_SkidList.
-- If you notice new cheats by the kwc\_\* file, add their filename keywords to sv\_ECheck to trigger a detection. Careful of "wooden\_shack" etc having "hack" in the name. See sv\_ECheck.
-
-
-
-
-You can contact me on Steam for any advice/questions about HAC or how any of it works if you want, but I \*ABSOLUTELY WILL NOT\* help kids and/or people who can't code set it up.
-
 -=[UH]=- General HeX.
-
-[http://steamcommunity.com/id/MFSiNC](http://steamcommunity.com/id/MFSiNC)
 
