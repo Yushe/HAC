@@ -305,6 +305,7 @@ lua/lists/sv_SLOG.lua --See sv_SLOG, good/bad.
     Size of hac_log.txt   - 14.48 MB
     Size of hac_init.txt  - 3.14 MB
 === End ===
+```
 
 === The end ===
 
