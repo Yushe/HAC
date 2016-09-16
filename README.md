@@ -8,7 +8,7 @@
 
 Help credits:
 Willox    - Helping cheaters lose their marbles since '14
-RyanJGray - Helping with texting & ideas. Best of luck with your own AC
+RyanJGray - Helping with testing & ideas. Best of luck with your own AC
 ```
 
 ## Don't use this. It will not work and will break your server!##
